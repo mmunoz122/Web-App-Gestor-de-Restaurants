@@ -67,7 +67,7 @@ function All() {
   const reviewersPerPage = 1; 
   // Número de reviewers que se muestran por página.
 
-  // Cargar reviewers desde Firebase
+  // Cargar reviewers desde Firebase                                                                            *********************
   useEffect(() => {
     const loadReviewers = async () => {
       try {
@@ -99,7 +99,7 @@ function All() {
   }, []); 
   // Este efecto se ejecuta solo una vez al montar el componente.
 
-  // Crear un nuevo reviewer
+  // Crear un nuevo reviewer                                                    ***********
   const handleCreateReviewer = async () => {
     if (!name || !web) {
       alert("El nom i la web són obligatoris."); 
@@ -132,7 +132,7 @@ function All() {
     }
   };
 
-  // Eliminar un reviewer
+  // Eliminar un reviewer                                             ********************
   const handleDeleteReviewer = useCallback(async (id) => {
     try {
       await deleteDoc(doc(db, "publications", id)); 
@@ -154,7 +154,7 @@ function All() {
   }, []); 
   // Esta función se memoriza para evitar recreaciones innecesarias.
 
-  // Actualizar un reviewer
+  // Actualizar un reviewer                                                               ******************
   const handleUpdateReviewer = useCallback(async (id, updatedData) => {
     try {
       const reviewerRef = doc(db, "publications", id); 
@@ -186,7 +186,7 @@ function All() {
   }, []); 
   // Esta función se memoriza para evitar recreaciones innecesarias.
 
-  // Obtener el Channel ID de YouTube
+  // Obtener el Channel ID de YouTube                                                           **************
   const handleGetChannelId = async () => {
     if (!web) {
       alert("Introdueix la web del youtuber."); 
@@ -223,7 +223,7 @@ function All() {
     }
   };
 
-  // Cargar los últimos vídeos de YouTube
+  // Cargar los últimos vídeos de YouTube                                                   *************
   const handleLoadLatestVideos = async (channelId, reviewerId, lastCheckedVideoId) => {
     if (!channelId) {
       alert("No s'ha proporcionat un Channel ID."); 
@@ -299,7 +299,7 @@ function All() {
     }
   };
 
-  // Filtrar reviewers
+  // Filtrar reviewers                                                                        ******************
   const filteredReviewers = useMemo(() => {
     const query = searchQuery.toLowerCase(); 
     // Convertimos la consulta de búsqueda a minúsculas.
@@ -333,7 +333,7 @@ function All() {
     // Actualizamos la página actual.
   };
 
-  // Componente para el formulario de edición
+  // Componente para el formulario de edición                                                   ***********
   const EditReviewerForm = ({ reviewer, onUpdate, onCancel }) => {
     const [name, setName] = useState(reviewer.name); 
     // Estado para el nombre del reviewer en edición.
