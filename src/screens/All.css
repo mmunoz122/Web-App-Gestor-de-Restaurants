@@ -1,0 +1,268 @@
+body {
+    background-color: #7d7d7d; 
+    /* Fondo gris para el cuerpo de la página. */
+    margin: 0;
+    padding: 0;
+    /* Eliminamos márgenes y relleno por defecto. */
+    font-family: Arial, sans-serif;
+    /* Fuente predeterminada para el texto. */
+}
+
+.container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px; 
+    /* Ancho máximo del contenedor. */
+    margin: 0 auto; 
+    /* Centramos el contenedor horizontalmente. */
+    background-color: #1a1a2e; 
+    /* Fondo oscuro para el contenedor. */
+    border-radius: 10px;
+    /* Bordes redondeados. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    /* Sombra para dar profundidad. */
+    color: #ffffffd7;
+    /* Color de texto blanco con transparencia. */
+    font-style: italic; 
+    /* Texto en cursiva. */
+}
+
+.section {
+    margin-bottom: 20px;
+    /* Espacio inferior entre secciones. */
+}
+
+.form-section, .search-section, .reviewers-list {
+    margin-bottom: 30px;
+    /* Espacio inferior para estas secciones. */
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    /* Ancho máximo para los inputs. */
+    border: 1px solid #333;
+    border-radius: 5px;
+    /* Bordes redondeados para los inputs. */
+    background-color: #2a2a40;
+    /* Fondo oscuro para los inputs. */
+    color: #e0e0e0;
+    /* Color de texto claro. */
+}
+
+input::placeholder {
+    color: #999;
+    /* Color del texto de placeholder. */
+}
+
+button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    /* Bordes redondeados para los botones. */
+    transition: background-color 0.3s ease;
+    /* Transición suave al pasar el ratón. */
+    color: rgb(0, 0, 0);
+    /* Color de texto negro. */
+}
+
+button:hover {
+    opacity: 0.9;
+    /* Efecto de opacidad al pasar el ratón. */
+}
+
+.reviewer-card {
+    border: 1px solid #333;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #2a2a40;
+    /* Fondo oscuro para las tarjetas. */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera. */
+    color: #e0e0e0;
+    /* Color de texto claro. */
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* Hacemos la imagen redonda. */
+}
+
+.video-link {
+    color: #00ff37;
+    /* Color verde para el enlace de vídeo. */
+    text-decoration: none;
+    /* Sin subrayado. */
+}
+
+.video-link:hover {
+    text-decoration: underline;
+    /* Subrayado al pasar el ratón. */
+}
+
+.web-link {
+    color: #007bff;
+    /* Color azul para el enlace de la web. */
+    text-decoration: none;
+    /* Sin subrayado. */
+}
+
+.web-link:hover {
+    text-decoration: underline;
+    /* Subrayado al pasar el ratón. */
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    /* Fondo rojo para el botón de eliminar. */
+}
+
+.update-btn {
+    background-color: #4CAF50;
+    /* Fondo verde para el botón de actualizar. */
+}
+
+.load-videos-btn {
+    background-color: #008CBA;
+    /* Fondo azul para el botón de cargar vídeos. */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #1a1a2e;
+    /* Fondo oscuro para la barra lateral. */
+    padding: 20px;
+    position: fixed;
+    /* Barra lateral fija. */
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #ffffffd7;
+    /* Color de texto claro. */
+    font-style: italic;
+    /* Texto en cursiva. */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    /* Eliminamos el estilo de lista y el relleno. */
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    /* Bordes redondeados para los elementos de la lista. */
+    transition: background-color 0.3s ease;
+    /* Transición suave al pasar el ratón. */
+}
+
+.sidebar ul li:hover {
+    background-color: #2a2a40;
+    /* Cambio de color al pasar el ratón. */
+}
+
+.sidebar ul li.active {
+    font-weight: bold;
+    color: #007bff;
+    /* Color azul para el elemento activo. */
+    background-color: #2a2a40;
+    /* Fondo oscuro para el elemento activo. */
+}
+
+.search-section input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%; 
+    /* Ancho completo para el input de búsqueda. */
+  }
+  
+  .search-section button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+    /* Color gris para el botón de búsqueda. */
+  }
+  
+  .search-section button:hover {
+    color: #333; 
+    /* Cambio de color al pasar el ratón. */
+  }
+
+  .loading-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centramos el diálogo de carga. */
+    background: rgba(255, 255, 255, 0.9);
+    /* Fondo semitransparente. */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+    /* Aseguramos que esté por encima de otros elementos. */
+  }
+  
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #09f;
+    /* Color azul para el spinner. */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    /* Animación de rotación. */
+    margin: 0 auto 10px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+      /* Rotación completa. */
+    }
+  }
+
+  .loading-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    /* Animación de rotación completa. */
+  }
